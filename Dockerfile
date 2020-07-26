@@ -1,7 +1,7 @@
 From nginx:alpine
 #RUN  sed -i 's/dl-cdn.alpinelinux.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apk/repositories \&& 
-RUN      apk update \&& 
-         apk add --no-cache git
+RUN  apk update \
+     && apk add --no-cache git
 RUN echo "cd /usr/share/nginx/html && git pull">/config/start.sh
 RUN chmod 777 /config/start.sh
 RUN rm -rf /usr/share/nginx/html
