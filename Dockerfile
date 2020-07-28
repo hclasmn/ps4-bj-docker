@@ -8,6 +8,6 @@ RUN echo "git fetch --all && git reset --hard origin/master && git pull -f">>/st
 RUN chmod 777 /start.sh
 RUN rm -rf /usr/share/nginx/html
 RUN git clone https://github.com/zerofo/ps4jb.git /usr/share/nginx/html
-RUN echo "0 4 * * * /start.sh">>/var/spool/cron/crontabs/root
+RUN echo "0 */1 * * * /start.sh">>/var/spool/cron/crontabs/root
 EXPOSE 443
 EXPOSE 80
