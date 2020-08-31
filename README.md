@@ -1,6 +1,6 @@
 # ps4-bj-6.72
 
-git clone https://github.com/zerofo/leeful_jb.git
+git clone https://github.com/zerofo/BW.git
 
 #该mira-test版本支持P5R
 
