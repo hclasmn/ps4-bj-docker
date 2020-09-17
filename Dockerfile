@@ -6,7 +6,7 @@ RUN git config --global user.name scjtqs && git config --global user.email scjtq
 RUN echo "cd /usr/share/nginx/html && git fetch --all && git reset --hard origin/master && git pull -f">>/start.sh
 RUN chmod 777 /start.sh
 RUN rm -rf /usr/share/nginx/html
-RUN git clone https://github.com/zerofo/BW.git /usr/share/nginx/html
+RUN git clone https://github.com/zerofo/zerofo.github.io.git /usr/share/nginx/html
 RUN echo "0 */2 * * * /start.sh">>/var/spool/cron/crontabs/root
 RUN touch /crond.sh
 RUN echo "crond && nginx -g 'daemon off;'">>/crond.sh
