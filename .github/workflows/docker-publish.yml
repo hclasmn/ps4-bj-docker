@@ -14,7 +14,8 @@ on:
   pull_request:
        branches:
         - master
-  
+  watch:
+        types: [started]
   schedule:
     - cron: "0 2 * * *"  
 
